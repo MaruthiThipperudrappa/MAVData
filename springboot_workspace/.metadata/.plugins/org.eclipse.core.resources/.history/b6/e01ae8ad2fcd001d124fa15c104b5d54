@@ -1,0 +1,10 @@
+package streams_Java8;
+
+public class Serialization_deseralization {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

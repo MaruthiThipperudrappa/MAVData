@@ -1,0 +1,10 @@
+package com.javaexpress.feignclient;
+
+import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClient;
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient("loans")
+@LoadBalancerClient("loans")
+public interface LoanFeignClient {
+
+}

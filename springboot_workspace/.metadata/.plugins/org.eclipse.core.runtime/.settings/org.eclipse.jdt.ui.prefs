@@ -1,0 +1,23 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="yes.javaproject.school"><rhs name\="yes.javaproject.school"/></lhs><lhs name\="java.lang.Enum"><rhs name\="javax.persistence.GenerationType"/><rhs name\="org.springframework.http.HttpStatus"/></lhs><lhs name\="java.lang.constant.Constable"><rhs name\="javax.persistence.GenerationType"/><rhs name\="org.springframework.http.HttpStatus"/></lhs><lhs name\="streams_Java8.Singleton"><rhs name\="streams_Java8.Singleton"/></lhs><lhs name\="java.lang.CharSequence"><rhs name\="java.lang.StringBuilder"/></lhs><lhs name\="java.lang.AbstractStringBuilder"><rhs name\="java.lang.StringBuilder"/></lhs><lhs name\="java.lang.Appendable"><rhs name\="java.lang.StringBuilder"/></lhs><lhs name\="org.springframework.http.HttpEntity"><rhs name\="org.springframework.http.ResponseEntity"/></lhs><lhs name\="org.springframework.http.ResponseEntity"><rhs name\="org.springframework.http.ResponseEntity"/></lhs><lhs name\="org.aspectj.bridge.MessageUtil"><rhs name\="org.aspectj.bridge.MessageUtil"/></lhs><lhs name\="com.javaexpress.models.Category"><rhs name\="com.javaexpress.models.Category"/></lhs><lhs name\="com.javaexpress.ExceptionHandling.Errordetails"><rhs name\="com.javaexpress.ExceptionHandling.Errordetails"/></lhs><lhs name\="java.lang.Cloneable"><rhs name\="java.util.Date"/></lhs><lhs name\="java.util.Date"><rhs name\="java.util.Date"/></lhs><lhs name\="streams_Java8.asdfasdf"><rhs name\="streams_Java8.asdfasdf"/></lhs></history>
+content_assist_number_of_computers=15
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+do_not_ask_to_install_user_dictionary=true
+eclipse.preferences.version=1
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.formatterprofiles.version=22
+spelling_ignore_ampersand_in_properties=true
+spelling_ignore_digits=true
+spelling_ignore_java_strings=true
+spelling_ignore_mixed=true
+spelling_ignore_non_letters=true
+spelling_ignore_sentence=true
+spelling_ignore_single_letters=true
+spelling_ignore_upper=true
+spelling_ignore_urls=true
+spelling_locale_initialized=true
+spelling_user_dictionary_encoding=windows-1252
+typefilter_migrated_2=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

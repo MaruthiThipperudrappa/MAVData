@@ -1,0 +1,5 @@
+package com.javaexpress.repositories;
+
+public interface ProductRepository {
+
+}

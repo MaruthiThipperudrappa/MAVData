@@ -1,0 +1,33 @@
+package com.javaexpress.repositories;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+
+import com.javaexpress.entity.Person;
+
+@Repository
+//@EnableJpaRepositories
+public interface PersonRepository extends CrudRepository<Person,Integer> {
+	
+@Query(value="select u from Person u")
+List<Person> fetchallusers();
+
+//wants retrieve all username in database
+@Query(value="select u.userName from Person u")
+List<String> fetchAllusername();
+
+//wants retrieve all userid in database
+@Query(value = "select u from Person u where u.userId=:userId")
+ List<Person> fetchUserInfoById(Integer userId);
+
+@Query(value="select u from Person u where u.userName=:uName and u.emailId=:uemail")
+List<Person> findByUserNameAndemailId(@Param("uName")String username,@Param("uemail")String emailId);
+
+@Query(value="update Person u set u.userName=:userName where u.emailId=:emailId")
+int updateUserNameForEmail(String userName,String emailId);
+}

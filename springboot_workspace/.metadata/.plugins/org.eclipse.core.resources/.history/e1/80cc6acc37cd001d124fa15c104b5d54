@@ -1,0 +1,42 @@
+package streams_Java8;
+
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+
+public class NewInstanceMethod {
+
+	public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
+		Employee e=new Employee();
+		
+		System.out.println(e);
+		
+		e.name="maruthi";
+		
+		System.out.println(e.name);
+		
+		//creating object with new instance
+		
+		Employee em=(Employee) Class.forName("streams_Java8.Employee").newInstance();
+		
+		System.out.println(em.name);
+		em.name="once upon a time";
+		System.out.println(em.name);
+		
+		
+		System.out.println("**********************");
+		
+		//Employee em1=(Employee) Class.getConstructor().newInstance();;
+		
+		Class<Employee> cee=(Class<Employee>) Class.forName("streams_Java8.Employee");
+		Constructor<Employee> ctor=cee.getConstructor(String.class);
+		
+		Employee pem=ctor.newInstance(Employee.class);
+		System.out.println("************************");
+		System.out.println(pem);
+		
+		
+		
+
+	}
+
+}

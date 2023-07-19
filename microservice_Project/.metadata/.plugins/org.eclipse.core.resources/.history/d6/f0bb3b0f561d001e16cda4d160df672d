@@ -1,0 +1,49 @@
+/**
+ * 
+ */
+package com.javaexpress.cards.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.javaexpress.cards.model.Cards;
+import com.javaexpress.cards.responses.CustomerLoanDetails;
+import com.javaexpress.cards.services.CardsService;
+import com.javaexpress.feignclient.LoanFeignClient;
+
+import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
+@RestController
+@Slf4j
+@AllArgsConstructor
+@RequestMapping("/api/v1/cards")
+public class CardsController {
+
+		
+	@Autowired
+	private CardsService cardsService;
+	
+	
+	  @Autowired 
+	  private LoanFeignClient loanFeignClient;
+	 
+	
+	@GetMapping("/{customerId}")
+	public List<Cards> getCardDetails(@PathVariable("customerId") int customerId) {
+		log.info("card controller---> getCardDetails{}",customerId);
+		return cardsService.getCardDetails(customerId);
+	}
+	
+	@GetMapping("/CustomerLoaninfo/{customerId}")
+	public CustomerLoanDetails(@PathVariable("customerId") int customerId) {
+		log.info("fetch Cards Details ()",customerId);
+		List<Cards> cards=cardsService.getCardDetails(customerId);	
+		Var Loan=loanFeignClient.getLoansDetails(customerId);	
+	}
+}

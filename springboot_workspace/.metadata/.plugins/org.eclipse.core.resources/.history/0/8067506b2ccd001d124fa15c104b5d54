@@ -1,0 +1,24 @@
+package streams_Java8;
+
+public class NewInstanceMethod {
+
+	public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		Employee e=new Employee();
+		
+		System.out.println(e);
+		
+		e.name="maruthi";
+		
+		System.out.println(e.name);
+		
+		//creating object with new instance
+		
+		Employee em=(Employee) Class.forName("streams_Java8.Employee").newInstance();
+		
+		System.out.println(em.name);
+		em.name="once upon a time";
+		System.out.println(em.name);
+
+	}
+
+}

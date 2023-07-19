@@ -1,0 +1,21 @@
+package com.javaexpress.responses;
+
+import java.sql.Date;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+
+@Data
+@AllArgsConstructor
+public class Cards {
+	
+		private Integer cardId;
+		private int customerId;
+		private String cardNumber;
+		private String cardType;
+		private int totalLimit;
+		private int amountUsed;
+		private int availableAmount;
+		private Date createDt;
+	}
+

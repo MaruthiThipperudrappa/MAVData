@@ -1,0 +1,11 @@
+package streams_Java8;
+
+public class NewInstanceMethod {
+
+	public static void main(String[] args) {
+		Employee e=new Employee();
+		
+
+	}
+
+}

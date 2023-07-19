@@ -1,0 +1,20 @@
+package streams_Java8;
+
+public class asdfasdf {
+	
+	private static asdfasdf singleinstance=null;
+	
+	public String s;
+	
+	private asdfasdf(){
+		s="sadfsdf";
+	}
+	
+	
+	
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

@@ -1,0 +1,24 @@
+package com.java8.interfaces;
+
+interface B{
+	static final String DB_Username="Maruthi";
+	
+	public abstract void m1();
+}
+
+
+public class A implements B{
+
+	public static void main(String[] args) {
+	B obj=new A();
+	obj.m1();
+
+	}
+
+	@Override
+	public void m1() {
+		System.out.println("m1 method is executed");
+		
+	}
+
+}

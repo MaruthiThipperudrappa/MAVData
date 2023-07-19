@@ -1,0 +1,12 @@
+package com.javaexpress.cards.responses;
+
+import com.javaexpress.cards.model.Cards;
+
+public class CustomerLoanDetails {
+	
+	private Cards cards;
+	
+	private List<Loans> loans;
+	
+
+}

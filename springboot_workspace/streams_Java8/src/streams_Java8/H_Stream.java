@@ -1,0 +1,18 @@
+package streams_Java8;
+
+import java.util.stream.Stream;
+
+public class H_Stream {
+
+	public static void main(String[] args) {
+		Integer[]arr= {34,57,83,91,47,50};
+			
+		Stream<Integer> numbers=Stream.of(arr);
+		
+		numbers.forEach(System.out::println);
+		//numbers.forEach(System.out::print);
+
+		
+	}
+
+}

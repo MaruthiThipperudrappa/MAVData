@@ -1,0 +1,37 @@
+package streams_Java8;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
+public class Serialization_deseralization {
+
+	public static void main(String[] args) throws IOException, ClassNotFoundException {
+		
+		
+		
+		//Serialization
+		
+		FileOutputStream fos=new FileOutputStream("Text.txt");
+		ObjectOutputStream oos=new ObjectOutputStream(fos);
+		Employee e=new Employee();
+		oos.writeObject(e);
+		
+		//Deserialization
+		
+		FileInputStream fis=new FileInputStream("Text.txt");
+		ObjectInputStream ois=new ObjectInputStream(fis);
+		Employee e1=(Employee) ois.readObject();
+		System.out.println(e1);
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

@@ -1,0 +1,42 @@
+package streams_Java8;
+
+
+public class Employee {
+
+	
+	String name;
+	Integer Salary;
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Integer getSalary() {
+		return Salary;
+	}
+	public void setSalary(Integer salary) {
+		Salary = salary;
+	}
+	
+
+	
+	
+	public Employee() {
+		super();
+	}
+	@Override
+	public String toString() {
+		return "Employee [name=" + name + ", Salary=" + Salary + "]";
+	}
+	public Employee(String name, Integer salary) {
+		super();
+		this.name = name;
+		Salary = salary;
+	}
+	
+
+	
+	
+}

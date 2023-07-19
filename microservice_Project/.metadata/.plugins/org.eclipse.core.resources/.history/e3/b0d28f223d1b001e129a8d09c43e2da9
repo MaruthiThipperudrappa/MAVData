@@ -1,0 +1,21 @@
+package com.javaexpress.feignclients;
+
+import java.util.List;
+
+import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClient;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.javaexpress.responses.Cards;
+
+
+
+@FeignClient("cards")	//http://localhost:9000
+@LoadBalancerClient("cards")
+public interface CardsFeignClient {
+	
+	@GetMapping("/api/v1/cards/{customerId}")
+	public List<Cards> getCardDetails(@PathVariable("customerId") int customerId);
+
+}

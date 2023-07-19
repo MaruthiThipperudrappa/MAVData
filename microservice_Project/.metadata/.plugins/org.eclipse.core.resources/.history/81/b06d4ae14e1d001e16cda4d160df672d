@@ -1,0 +1,28 @@
+package com.javaexpress.cards.responses;
+
+import java.sql.Date;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+
+@Getter
+@Setter
+@ToString
+public class Loans {
+	
+	private Integer loanNumber;
+	private Integer customerId;
+	private Date startDt;
+	private String loanType;
+	private Integer totalLoan;
+	private Integer amountPaid;
+	private Integer outstandingAmount;
+	private String createDt;
+
+}

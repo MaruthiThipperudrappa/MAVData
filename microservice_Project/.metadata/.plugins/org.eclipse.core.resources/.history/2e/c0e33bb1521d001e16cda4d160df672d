@@ -1,0 +1,30 @@
+package com.javaexpress.cards.services;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.javaexpress.cards.model.Cards;
+import com.javaexpress.cards.repository.CardsRepository;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Service
+@Slf4j
+public class CardsService {
+	
+	@Autowired
+	private CardsRepository cardsRepository;
+	
+	public Cards CardsDetails(int customerId) {
+		log.info("AccountService -> Fetch Account Information from Database");
+		Optional<Cards> optional = cardsRepository.findById(customerId);
+		if(optional.isPresent()) {
+			return optional.get();
+		}
+		return null;
+	}
+
+	
+
+}

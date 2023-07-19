@@ -1,0 +1,26 @@
+package streams_Java8;
+
+public class asdfasdf {
+	
+	private static asdfasdf singleinstance=null;
+	
+	public String s;
+	
+	private asdfasdf(){
+		s="sadfsdf";
+	}
+	
+	public static synchronized asdfasdf getInstance() {
+		if(singleinstance==null) 
+			singleinstance=new asdfasdf();		
+			return singleinstance;
+		
+	}
+		
+	public static void main(String[] args) {
+		asdfasdf f=getInstance();
+		System.out.println(f);
+		
+	}
+
+}

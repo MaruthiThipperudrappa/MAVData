@@ -1,0 +1,15 @@
+package streams_Java8;
+
+public class Serialization_deseralization {
+
+	public static void main(String[] args) {
+		
+		Employee e=new Employee();
+		
+		//Serialization
+		
+		
+
+	}
+
+}

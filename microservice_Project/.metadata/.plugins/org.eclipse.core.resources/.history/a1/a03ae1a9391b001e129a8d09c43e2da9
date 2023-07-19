@@ -1,0 +1,5 @@
+package com.javaexpress.responses;
+
+public class CustomerDetails {
+
+}

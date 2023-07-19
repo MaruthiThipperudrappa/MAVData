@@ -1,0 +1,20 @@
+package com.javaexpress.cards.responses;
+
+import java.util.List;
+
+import com.javaexpress.cards.model.Cards;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+
+@Data
+@AllArgsConstructor
+public class CustomerLoanDetails {
+	
+	private Cards cards;
+	
+	private List<Loans> loans;
+	
+
+}

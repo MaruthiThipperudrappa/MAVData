@@ -1,0 +1,54 @@
+package com.javaexpress.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.javaexpress.models.Category;
+import com.javaexpress.services.ICategory;
+
+@RestController
+public class CategoryController {
+
+	@Autowired 
+	private ICategory iCategory;
+	
+	
+	@PostMapping("/category/create")
+	public Category createCategory(@RequestBody Category inputcategory) {
+		return iCategory.createCategory(inputcategory);
+	}
+	
+	@GetMapping("/category/all")
+	public Iterable<Category> fetchAllCategories() {
+		return iCategory.fetchAllCategories();	
+	}
+	
+	@GetMapping("/category/{id}")
+	public Category fetchCategory(@PathVariable("id")Integer categoryId) {
+		return iCategory.fetchCategory(categoryId);
+		
+	}
+	
+	@DeleteMapping("/category/{id}")
+	public void deleteCategory(@PathVariable("id")Integer categoryId) {
+		iCategory.delete(categoryId);	
+	}
+	
+	/*
+	 * @PutMapping("/category/{id}") public Category
+	 * updateCategory(@PathVariable("id") Integer categoryId, @RequestBody Category
+	 * inputcategory) { return iCategory.updateCategory(categoryId,inputcategory);
+	 * 
+	 * }
+	 */
+
+
+}
+
+

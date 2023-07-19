@@ -1,0 +1,66 @@
+package com.javaexpress.services;
+import java.util.Optional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.javaexpress.models.Category;
+import com.javaexpress.repositories.CategoryRepository;
+
+@Service
+public class CategoryServiceimpl implements ICategory{
+
+	
+	@Autowired
+	private CategoryRepository categoryRepository;
+
+	@Override
+	public Category createCategory(Category inputcategory) {
+		// TODO Auto-generated method stub
+		
+		System.out.println(inputcategory.toString());
+		return categoryRepository.save(inputcategory);
+	}
+
+	@Override
+	public void delete(Integer id) {
+		Category dbcategory=fetchCategory(id);
+		categoryRepository.delete(dbcategory);
+	}
+
+	@Override
+	public Category fetchCategory(Integer id) {
+		
+		Optional<Category> optional =categoryRepository.findById(id);
+		
+		System.out.println("maruthi "+optional.toString());
+		
+		if(optional.isPresent()) {			
+		Category category=optional.get();
+		System.out.println(category);
+			return category;
+		}else {
+			throw new RuntimeException("Category not found exception");
+	}
+	}
+	@Override
+	public Iterable<Category> fetchAllCategories() {
+		return categoryRepository.findAll();
+	}
+
+	@Override
+	public Category updateCategory(Integer id, Category category){
+		
+		Category dbcategory=fetchCategory(id);
+		if(dbcategory!=null) {
+			dbcategory.setId(category.getId());
+			dbcategory.setName(category.getName());
+			dbcategory.setCreatedTime(category.getCreatedTime());
+			dbcategory.setUpdateTime(category.getUpdateTime());
+			categoryRepository.save(dbcategory);
+		}
+			
+		return null;
+	}
+
+
+	
+}
